@@ -23,7 +23,7 @@ const App = () => {
 				<span>{client.name}</span>
 				<span>{client.mobile}</span>
 				<span>{client.email}</span>
-				<Link to={`account/${client._id}`}>
+				<Link to={`/${client._id}`}>
 					<button>Transactions</button>
 				</Link>
 			</div>
@@ -39,7 +39,7 @@ const App = () => {
 						<h1>Bank Clients</h1>
 						<div className="clients">{renderClients}</div>
 					</Route>
-					<Route exact path="/account/:id" component={Transactions} />
+					<Route exact path="/:id" component={Transactions} />
 					<Route exact path="/create" component={User} />
 				</Switch>
 			</BrowserRouter>
