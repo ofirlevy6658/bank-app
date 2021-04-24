@@ -13,6 +13,7 @@ const Transactions = () => {
 	const creditRef = useRef(null);
 	useEffect(() => {
 		const fetchData = async () => {
+			console.log(api);
 			const userData = await api.get(`user/${params.id}`);
 			setUserData(userData.data[0]);
 			setUserBankAccount(userData.data[1]);
