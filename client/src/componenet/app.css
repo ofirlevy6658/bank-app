@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #f3f4f6;
+	font-family: "Montserrat", -apple-system, system-ui, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+	color: #778298;
+}
+a {
+	text-decoration: none;
+	color: #778298;
+}
+h1 {
+	text-align: center;
+}
+.clients {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.client {
+	border: solid 3px;
+}
+span {
+	color: black;
+	font-size: 22px;
+	margin: 30px;
+}
+
+.user-data {
+	display: flex;
+	flex-direction: column;
+	word-spacing: 30px;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: center;
+}
+
+li {
+	margin: 25px;
+	list-style-type: none;
+}
+
+p {
+	margin: 0;
+}
+button {
+	background-color: #4caf50; /* Green */
+	border: none;
+	color: white;
+	padding: 6px 8px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+input {
+	padding: 6px 8px;
+	box-sizing: border-box;
+}
