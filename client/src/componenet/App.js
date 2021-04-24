@@ -39,7 +39,7 @@ const App = () => {
 						<h1>Bank Clients</h1>
 						<div className="clients">{renderClients}</div>
 					</Route>
-					<Route exact path="/account/:id" component={Transactions} />
+					<Route exact path="/:id" component={Transactions} />
 					<Route exact path="/create" component={User} />
 				</Switch>
 			</BrowserRouter>
