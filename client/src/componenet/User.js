@@ -15,7 +15,6 @@ const User = () => {
 		} catch (e) {
 			console.log(e);
 		}
-		window.location.reload();
 	};
 	return (
 		<>
