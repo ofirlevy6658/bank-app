@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../API/api";
 
 const User = () => {
 	const [name, setName] = useState("");
@@ -7,7 +7,7 @@ const User = () => {
 	const [email, setEmail] = useState("");
 	const clickHandle = async () => {
 		try {
-			await axios.post("http://localhost:4000/api/user", {
+			await api.post("/user", {
 				name: name,
 				mobile: mobile,
 				email: email,
