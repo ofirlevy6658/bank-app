@@ -3,14 +3,17 @@ const Account = require("./models/account");
 const AccountLog = require("./models/transition");
 const { findById, findByIdAndUpdate } = require("./models/user");
 
-async function addUser({ name, mobile, email }) {
-	if (!name || !mobile || !email)
-		throw new Error("parameters name ,mobile and email must be provide");
+async function addUser({ name, mobile, email, password }) {
+	if (!name || !mobile || !email || !password)
+		throw new Error(
+			"parameters name ,mobile password and email must be provide"
+		);
 	try {
 		const user = new User({
 			name,
 			mobile,
 			email,
+			password,
 		});
 		await user.save();
 		createBankAccount(user._id);

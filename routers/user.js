@@ -1,6 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const utils = require("../utils");
+const User = require("../models/user");
 
 router.post("/api/user", async (req, res) => {
 	try {
@@ -60,6 +61,19 @@ router.get("/api/users", async (req, res) => {
 		res.status(200).send(await utils.getUsers());
 	} catch (e) {
 		res.status(400).send({ error: e.message });
+	}
+});
+
+router.post("/api/login", async (req, res) => {
+	try {
+		const user = await User.findByCredentials(
+			req.body.email,
+			req.body.password
+		);
+		const token = await user.generateAuthToken();
+		res.send({ user, token });
+	} catch (e) {
+		res.status(400).send(e.message);
 	}
 });
 
